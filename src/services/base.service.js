@@ -50,7 +50,9 @@ class BaseService {
             throw error;
         }
 
-        return await this.reposetory.delete(id);
+        await this.reposetory.delete(id);
+
+        return true;
     }
 }
 
